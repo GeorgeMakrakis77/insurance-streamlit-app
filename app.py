@@ -1,4 +1,4 @@
-import kagglehub
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -10,9 +10,8 @@ from sklearn.metrics import r2_score, mean_absolute_error
 # =========================
 # 1. DATA LOADING
 # =========================
+df = pd.read_csv("insurance.csv")
 
-path = kagglehub.dataset_download("mirichoi0218/insurance")
-df = pd.read_csv(f"{path}/insurance.csv")
 
 st.title("Medical Insurance Cost Analysis & Prediction App")
 
